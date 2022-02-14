@@ -1,0 +1,133 @@
+.item {
+    width: 100%;
+    border-top: solid 1px #e6e6e6;
+    padding: 5px;
+    display: flex;
+}
+
+.ticker {
+    width: 20%;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+}
+
+.price_wrapper {
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+}
+
+.change_wrapper {
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+}
+
+.change_percent_wrapper {
+    position: relative;
+    width: 20%;
+    overflow: hidden;
+}
+
+.price {
+    width: 30%;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+    position: absolute;
+    animation: fadeIn ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.price_fade {
+    width: 30%;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #202124;
+    position: absolute;
+    animation: fadeOut ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+.change_plus, .change_minus {
+    position: absolute;
+    text-align: end;
+    width: 25%;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    animation: fadeIn ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_plus_fade, .change_minus_fade {
+    position: absolute;
+    text-align: end;
+    width: 25%;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    animation: fadeOut ease 500ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.change_plus, .change_plus_fade {
+    color: #62a175;
+}
+
+.change_minus, .change_minus_fade {
+    color: #b66262;
+}
+
+
+.button_on, .button_off {
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    width: 10%;
+}
+
+.button_on:hover, .button_off:hover {
+    filter: brightness(110%);
+}
+
+.button_on {
+    background-color: #b66262;
+}
+
+.button_off {
+    background-color: #62a175;
+}
